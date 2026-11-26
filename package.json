@@ -1,0 +1,22 @@
+{
+  "name": "rentflow",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RentFlow - Multi-Tenant Rental Management & Booking SaaS Platform",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:client": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=server && npm run build --workspace=client",
+    "test": "npm run test --workspace=server",
+    "seed": "npm run seed --workspace=server",
+    "seed:superadmin": "npm run seed:superadmin --workspace=server"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
